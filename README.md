@@ -1,1 +1,1 @@
-O tartaruga.py é um fork do CPython\Lib\turtle.py com comandos em pt_BR. Atualmente, apenas 5% dos brasileiros são fluentes em inglês. Portanto, o objetivo é descomplicar ainda mais o primeiro contato dos jovens com uma linguagem de programação.
+O tartaruga.py é um fork do CPython\Lib\turtle.py com comandos em pt_BR. Atualmente, apenas 5% dos brasileiros são fluentes em inglês. Portanto, o objetivo do tartaruga.py é descomplicar ainda mais o primeiro contato dos jovens com uma linguagem de programação.
