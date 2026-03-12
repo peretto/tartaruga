@@ -136,12 +136,152 @@ _tg_turtle_functions = ['back', 'backward', 'begin_fill', 'begin_poly', 'bk',
         'write', 'xcor', 'ycor']
 _tg_utilities = ['write_docstringdict', 'done']
 
+# Mapeamento de comandos do turtle.py (inglês) para pt_BR.
+# Mantemos este dicionário para reutilização na documentação.
+_PTBR_SCREEN_ALIASES = {
+    'addshape': 'adicioneforma',
+    'bgcolor': 'corfundo',
+    'bgpic': 'imagemfundo',
+    'bye': 'feche',
+    'clearscreen': 'limpetela',
+    'colormode': 'modocor',
+    'delay': 'atraso',
+    'exitonclick': 'sairaoclicar',
+    'getcanvas': 'obtenhacanvas',
+    'getshapes': 'obtenhaformas',
+    'listen': 'escute',
+    'mainloop': 'loopprincipal',
+    'mode': 'modo',
+    'no_animation': 'sem_animacao',
+    'numinput': 'entradanumero',
+    'onkey': 'aotecla',
+    'onkeypress': 'aopressionartecla',
+    'onkeyrelease': 'aosoltartecla',
+    'onscreenclick': 'aoclicartela',
+    'ontimer': 'aotemporizador',
+    'register_shape': 'registre_forma',
+    'resetscreen': 'reinicietela',
+    'screensize': 'tamanhotela',
+    'save': 'salve',
+    'setup': 'configure',
+    'setworldcoordinates': 'definacoordenadasmundo',
+    'textinput': 'entradatexto',
+    'title': 'titulo',
+    'tracer': 'rastreador',
+    'turtles': 'tartarugas',
+    'update': 'atualize',
+    'window_height': 'altura_janela',
+    'window_width': 'largura_janela',
+}
+
+_PTBR_TURTLE_ALIASES = {
+    'back': 'tras',
+    'backward': 'paratras',
+    'begin_fill': 'inicie_preenchimento',
+    'begin_poly': 'inicie_poligono',
+    'bk': 'tr',
+    'circle': 'circulo',
+    'clear': 'limpe',
+    'clearstamp': 'limpecarimbo',
+    'clearstamps': 'limpecarimbos',
+    'clone': 'clone',
+    'color': 'cor',
+    'degrees': 'graus',
+    'distance': 'distancia',
+    'dot': 'ponto',
+    'down': 'abaixe',
+    'end_fill': 'termine_preenchimento',
+    'end_poly': 'termine_poligono',
+    'fd': 'fr',
+    'fillcolor': 'corpreenchimento',
+    'fill': 'preencha',
+    'filling': 'preenchendo',
+    'forward': 'frente',
+    'get_poly': 'obtenha_poligono',
+    'getpen': 'obtenhacaneta',
+    'getscreen': 'obtenhatela',
+    'get_shapepoly': 'obtenha_forma_poligono',
+    'getturtle': 'obtenhatartaruga',
+    'goto': 'vapara',
+    'heading': 'angulo',
+    'hideturtle': 'escondatartaruga',
+    'home': 'casa',
+    'ht': 'et',
+    'isdown': 'canetaabaixada',
+    'isvisible': 'estavisivel',
+    'left': 'esquerda',
+    'lt': 'esq',
+    'onclick': 'aoclicar',
+    'ondrag': 'aoarrastar',
+    'onrelease': 'aosoltar',
+    'pd': 'ac',
+    'pen': 'caneta',
+    'pencolor': 'corcaneta',
+    'pendown': 'abaixecaneta',
+    'pensize': 'tamanhocaneta',
+    'penup': 'levantecaneta',
+    'poly': 'poligono',
+    'pos': 'posicao',
+    'position': 'posicaoatual',
+    'pu': 'lc',
+    'radians': 'radianos',
+    'right': 'direita',
+    'reset': 'reinicie',
+    'resizemode': 'modoredimensionamento',
+    'rt': 'dir',
+    'seth': 'definaangulo',
+    'setheading': 'definadirecao',
+    'setpos': 'definaposicao',
+    'setposition': 'definaposicao',
+    'setundobuffer': 'definabufferdesfazer',
+    'setx': 'definax',
+    'sety': 'definay',
+    'shape': 'forma',
+    'shapesize': 'tamanhoforma',
+    'shapetransform': 'transformeforma',
+    'shearfactor': 'fatorinclinacao',
+    'showturtle': 'mostretartaruga',
+    'speed': 'velocidade',
+    'st': 'mt',
+    'stamp': 'carimbe',
+    'teleport': 'teletransporte',
+    'tilt': 'incline',
+    'tiltangle': 'anguloinclinacao',
+    'towards': 'emdirecao',
+    'turtlesize': 'tamanhotartaruga',
+    'undo': 'desfazer',
+    'undobufferentries': 'entradasdesfazer',
+    'up': 'levante',
+    'width': 'largura',
+    'write': 'escreva',
+    'xcor': 'coordenadax',
+    'ycor': 'coordenaday',
+}
+
+_PTBR_UTILITY_ALIASES = {
+    'write_docstringdict': 'escreva_dicionario_docstrings',
+    'done': 'fim',
+}
+
+COMANDOS_PT_BR = {
+    **_PTBR_SCREEN_ALIASES,
+    **_PTBR_TURTLE_ALIASES,
+    **_PTBR_UTILITY_ALIASES,
+}
+
+_tg_screen_functions_ptbr = list(_PTBR_SCREEN_ALIASES.values())
+_tg_turtle_functions_ptbr = list(_PTBR_TURTLE_ALIASES.values())
+_tg_utilities_ptbr = list(_PTBR_UTILITY_ALIASES.values())
+
 __all__ = (_tg_classes + _tg_screen_functions + _tg_turtle_functions +
-           _tg_utilities + ['Terminator'])
+           _tg_utilities + _tg_screen_functions_ptbr +
+           _tg_turtle_functions_ptbr + _tg_utilities_ptbr +
+           ['COMANDOS_PT_BR', 'Terminator'])
 
 _alias_list = ['addshape', 'backward', 'bk', 'fd', 'ht', 'lt', 'pd', 'pos',
                'pu', 'rt', 'seth', 'setpos', 'setposition', 'st',
                'turtlesize', 'up', 'width']
+_alias_list.extend(COMANDOS_PT_BR.values())
 
 _CFG = {"width" : 0.5,               # Screen
         "height" : 0.75,
@@ -4059,7 +4199,7 @@ def getmethparlist(ob):
                 call_args.append(f'**{param.name}')
             case _:
                 raise RuntimeError('Unsupported parameter kind', param.kind)
-    call_text = f'({', '.join(call_args)})'
+    call_text = '(' + ', '.join(call_args) + ')'
 
     return str(func_sig), call_text
 
@@ -4125,7 +4265,30 @@ _make_global_funcs(_tg_turtle_functions, Turtle,
                    'Turtle._pen', 'Turtle()', _turtle_docrevise)
 
 
+def _make_ptbr_aliases(alias_map, classes=None):
+    """Cria aliases em pt_BR para funções globais e métodos de classe."""
+    if classes is None:
+        classes = []
+
+    for english_name, ptbr_name in alias_map.items():
+        if english_name in globals() and ptbr_name not in globals():
+            globals()[ptbr_name] = globals()[english_name]
+            globals()[ptbr_name].__doc__ = globals()[english_name].__doc__
+
+        for cls in classes:
+            if hasattr(cls, english_name) and not hasattr(cls, ptbr_name):
+                setattr(cls, ptbr_name, getattr(cls, english_name))
+
+
+_make_ptbr_aliases(_PTBR_SCREEN_ALIASES, classes=[TurtleScreen, _Screen])
+_make_ptbr_aliases(_PTBR_TURTLE_ALIASES, classes=[RawTurtle, Turtle])
+_make_ptbr_aliases(_PTBR_UTILITY_ALIASES)
+
+
 done = mainloop
+
+# Mantemos compatibilidade com o alias clássico.
+fim = done
 
 if __name__ == "__main__":
     def switchpen():
